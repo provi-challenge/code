@@ -44,15 +44,6 @@ npm install
 npm start
 ```
 
-### Rodando testes
-
-Temos uma pasta `end-to-end` onde você pode rodar os testes end-to-end.
-
-```bash
-npm install
-npm run cypress
-```
-
 ## O que você precisa entregar?
 
 Uma mini aplicação que permite uma pessoa comprar um curso profisionalizante com uma condição de financiamento especialmente desenhada para a pessoa.
