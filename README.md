@@ -12,6 +12,7 @@ Ah, não querendo ser chato mas já sendo, siga bem atentamente os passos, caso 
 
 ## Configuração da Máquina
 
+- [Instale o Docker](https://docs.docker.com/get-docker/)
 - [Instale o Node.js](https://nodejs.org/en/download/)
     - [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) é a melhor forma de instalar Node.js
 
@@ -23,6 +24,14 @@ Ah, não querendo ser chato mas já sendo, siga bem atentamente os passos, caso 
 - Quando você terminar, lembre de fazer `push` em tudo.
 
 O projeto de back-end está na pasta `back` e o projeto de front-end na pasta `front`.
+
+Na raiz também temos um `package.json`, ele é útil para centralizar configurações que valem para ambos os projetos então rode `npm install` na raiz também.
+
+### Rodando o banco de dados
+
+Utilizamos PostgreSQL como banco de dados principal, temos um arquivo já configurado utilizando Docker Compose e você pode subir esse banco de dados via Docker com o seguinte comando:
+
+`docker-compose -f docker-compose-pg-only.yml up`
 
 ### Rodando cada projeto
 
