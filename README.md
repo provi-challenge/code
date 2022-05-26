@@ -1,8 +1,22 @@
-# Provi - Desafio de Código JS
+<p align="center">
+  <a href="https://github.com/provicapital/fe_provi_pay">
+      <img src="https://media-exp1.licdn.com/dms/image/C4E0BAQHNbnUnjosPdQ/company-logo_200_200/0/1575397110783?e=2159024400&v=beta&t=mRJfaeQQLAtvpo3PBGCoW27owyWY-x2nRUHskUVsI8o" alt="Logo" width="80" height="80">
+  </a>
+</p>
+<h1 align="center">
+  Provi - Desafio de Código JS
+</h1>
 
 Você quer entrar na Provi como Dev ou Tech Lead na área de Engenharia? Então você está no lugar certo.
 
 > Se você não quer entrar na área de Engenharia então você está no lugar errado :). Confira em [carreiras](https://provi.com.br/carreiras) outras vagas.
+
+Vamos dividir este documento em 2 partes. 
+
+1. É uma resolução assíncrona, na qual você pode resolver e enviar sua resposta ao seu tempo;
+2. É o mesmo problema, com o enunciado adaptado para uma sessão de Live Code;
+
+## Resolução Assíncrona
 
 Leia **todo** esse documento e submita a sua solução.
 
@@ -12,15 +26,15 @@ Boa sorte!
 
 Ah, não querendo ser chato mas já sendo, siga bem atentamente os passos, caso contrário pode ser que a sua submissão não caia em nosso fluxo adequado de feedback.
 
-## Configuração da Máquina
+### Configuração da Máquina
 
 - [Instale o Docker](https://docs.docker.com/get-docker/)
 - [Instale o Node.js](https://nodejs.org/en/download/)
     - [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) é a melhor forma de instalar Node.js
 
-## Configuração do Desafio
+### Configuração do Desafio
 
-### Repositório
+#### Repositório
 
 - Use esse repositório como ponto de partida através do GitHub Classroom (mais detalhes no fim do documento).
 - Quando você terminar, lembre de fazer `push` em tudo.
@@ -29,13 +43,13 @@ O projeto de back-end está na pasta `back` e o projeto de front-end na pasta `f
 
 Na raiz também temos um `package.json`, ele é útil para centralizar configurações que valem para ambos os projetos então rode `npm install` na raiz também.
 
-### Rodando o banco de dados
+#### Rodando o banco de dados
 
 Utilizamos PostgreSQL como banco de dados principal, temos um arquivo já configurado utilizando Docker Compose e você pode subir esse banco de dados via Docker com o seguinte comando:
 
 `docker-compose -f docker-compose-pg-only.yml up`
 
-### Rodando cada projeto
+#### Rodando cada projeto
 
 Ambos os projetos são instalados e executados da mesma forma:
 
@@ -44,7 +58,7 @@ npm install
 npm start
 ```
 
-## O que você precisa entregar?
+### O que você precisa entregar?
 
 Uma mini aplicação que permite uma pessoa comprar um curso profisionalizante com uma condição de financiamento especialmente desenhada para a pessoa.
 
@@ -75,20 +89,43 @@ A gente vai avaliar o que você fez baseado na vaga que você escolheu. Por exem
 
 Seja criativo!
 
-## Regras de Implementação
+### Regras de Implementação
 
 - Explique suas ideias como comentários no código; Fique a vontade para usar Português ou Inglês.
 - Não troque tecnologias já utilizadas mas fique a vontade para adicionar novas;
 
-## Importante
+### Importante
 
 - Um processo automático vai checar sua solução -- por favor, siga as regras para evitar problemas na checagem automática;
 - Não respondemos nenhuma pergunta sobre esse desafio. Fazemos isso para que todos tenham as mesmas condições;
 - Esse mesmo desafio serve para back-end e front-end porém a avaliação vai variar de acordo com a opção escolhida por você no momento da submissão. 
 
-## Como resolver o desafio
+### Como resolver o desafio
 
 - Crie um novo repositório utilizando o [GitHub Classroom assignment](https://classroom.github.com/a/ZVvFGUg8).
 - Quando você tiver feito push em tudo preencha esse [formulário](https://forms.gle/bttFAtWiGz4UTaCx5).
   - Antes dessa submissão nós não vamos nem olhar nada do que foi feito e muito menos rodar checagens automáticas.
 - Nosso time vai avaliar sua solução e dar feedback em até 15 dias úteis.
+
+## Live Code
+
+Neste repositório temos o boilerplate de uma mini aplicação que permite uma pessoa comprar um curso profisionalizante com uma condição de financiamento especialmente desenhada para a pessoa.
+
+### Fluxo
+
+1. Solicitar Dados Pessoais
+   1. Nome
+   2. Email
+   3. CPF
+   4. Valor da Entrada
+2. Escolher forma de Financiamento
+3. Escolher a forma de pagamento da entrada
+4. Confirmar as condições e efetuar a compra
+
+### Regras de Negócio
+
+Cada passo inclui idas e vindas no servidor para obter mais detalhes, exemplos:
+- O valor da entrada pode ser de 10%, 20% ou 30% do valor total do curso, o valor total do curso deve vir do servidor.
+- As formas de financiamento são dinâmicas, ou seja, depende da pessoa que está pedindo, os detalhes devem vir do servidor.
+- O processamento do pagamento deve ser feito no servidor.
+- A finalização da compra deve ser efetuado no servidor.
